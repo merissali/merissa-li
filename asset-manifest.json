@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/merissa-li/static/css/main.2bc81e87.chunk.css",
+    "main.js": "/merissa-li/static/js/main.251d0dcd.chunk.js",
+    "main.js.map": "/merissa-li/static/js/main.251d0dcd.chunk.js.map",
+    "runtime-main.js": "/merissa-li/static/js/runtime-main.86bc906f.js",
+    "runtime-main.js.map": "/merissa-li/static/js/runtime-main.86bc906f.js.map",
+    "static/js/2.528217f8.chunk.js": "/merissa-li/static/js/2.528217f8.chunk.js",
+    "static/js/2.528217f8.chunk.js.map": "/merissa-li/static/js/2.528217f8.chunk.js.map",
+    "static/js/3.6f8e490c.chunk.js": "/merissa-li/static/js/3.6f8e490c.chunk.js",
+    "static/js/3.6f8e490c.chunk.js.map": "/merissa-li/static/js/3.6f8e490c.chunk.js.map",
+    "index.html": "/merissa-li/index.html",
+    "static/css/main.2bc81e87.chunk.css.map": "/merissa-li/static/css/main.2bc81e87.chunk.css.map",
+    "static/js/2.528217f8.chunk.js.LICENSE.txt": "/merissa-li/static/js/2.528217f8.chunk.js.LICENSE.txt",
+    "static/media/headshot.1b1f81d7.jpg": "/merissa-li/static/media/headshot.1b1f81d7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86bc906f.js",
+    "static/js/2.528217f8.chunk.js",
+    "static/css/main.2bc81e87.chunk.css",
+    "static/js/main.251d0dcd.chunk.js"
+  ]
+}
