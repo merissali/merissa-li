@@ -1,14 +1,22 @@
 import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import headshot from "./img/headshot.jpg";
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Merissa Li</h1>
-      <h2>Author: Merissa Li</h2>
-      <img src={headshot} alt='headshot' />
-    </div>
+    <Router>
+      <Navbar />
+      {/* <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about' exact component={About} />
+          <Route path='/experiences' exact component={Experiences} />
+          <Route path='/projects' exact component={Projects} />
+          <Route path='/interests' exact component={Interests} />
+        </Switch>
+        <Footer /> */}
+    </Router>
   );
 }
 
