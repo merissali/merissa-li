@@ -12,3 +12,27 @@
 body {
   background-color: #fff;
 }
+
+h1 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 1rem 0 0 0;
+  color: #000;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+p {
+  color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+li {
+  color: #000;
+}

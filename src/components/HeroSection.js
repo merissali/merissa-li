@@ -1,18 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import homeBg from "../img/homeBg.jpg";
 import { Button } from "./Button";
 
 function HeroSection() {
   return (
-    <HeroContainer>
+    <HeroContainer id='home'>
       <HeroBg>
         <PictureBg src={homeBg}></PictureBg>
       </HeroBg>
       <HeroContent>
         <HeroH1>Hi, I'm Merissa!</HeroH1>
         <HeroBtnWrapper>
-          <Button to='/about'>GET TO KNOW ME</Button>
+          <Button to='about'>GET TO KNOW ME</Button>
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>
@@ -78,24 +78,8 @@ const HeroH1 = styled.h1`
   }
 `;
 
-const HeroP = styled.p`
-  margin-top: 24px;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-  max-width: 600px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 18px;
-  }
-`;
-
 const HeroBtnWrapper = styled.div`
-  margin-top: 20px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 function Navbar() {
@@ -7,19 +8,23 @@ function Navbar() {
   const navbarData = [
     {
       name: "About",
-      to: "/about",
+      // to: "/about",
+      to: "about",
     },
     {
       name: "Experiences",
-      to: "/experiences",
+      // to: "/experiences",
+      to: "experiences",
     },
     {
       name: "Projects",
-      to: "/projects",
+      // to: "/projects",
+      to: "projects",
     },
     {
       name: "Interests",
-      to: "/interests",
+      // to: "/interests",
+      to: "interests",
     },
   ];
 
@@ -44,7 +49,16 @@ function Navbar() {
   const navbarJSX = navbarData.map((navlink) => {
     return (
       <NavItem>
-        <NavLink to={navlink.to}>{navlink.name}</NavLink>
+        <NavLink
+          activeClass='selected'
+          to={navlink.to}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          {navlink.name}
+        </NavLink>
       </NavItem>
     );
   });
@@ -52,7 +66,9 @@ function Navbar() {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/'>MERISSA LI</NavLogo>
+        <NavLogo to='home' spy={true} smooth={true} offset={-90} duration={500}>
+          MERISSA LI
+        </NavLogo>
 
         <NavMenu>{areLinksVisible && navbarJSX}</NavMenu>
       </NavbarContainer>
@@ -111,6 +127,7 @@ const NavMenu = styled.ul`
   text-align: center;
   width: 75vw;
   justify-content: end;
+  margin-bottom: 0;
 
   &.active {
     background: #242222;
@@ -123,6 +140,9 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   height: 80px;
+  .selected {
+    text-decoration: underline;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -139,6 +159,7 @@ const NavLink = styled(Link)`
   line-height: 25px;
   letter-spacing: 0.05em;
   text-align: center;
+  cursor: pointer;
 
   ${({ hover }) =>
     hover &&
