@@ -3,61 +3,60 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  // data
+  const navbarData = [
+    {
+      name: "About",
+      to: "/about",
+    },
+    {
+      name: "Experiences",
+      to: "/experiences",
+    },
+    {
+      name: "Projects",
+      to: "/projects",
+    },
+    {
+      name: "Interests",
+      to: "/interests",
+    },
+  ];
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  // state
+  const [areLinksVisible, setAreLinksVisible] = useState(true);
 
-  const showButton = () => {
+  const showLinks = () => {
     if (window.innerWidth <= 960) {
-      setButton(false);
+      setAreLinksVisible(false);
     } else {
-      setButton(true);
+      setAreLinksVisible(true);
     }
   };
 
   useEffect(() => {
-    showButton();
+    showLinks();
   }, []);
 
-  window.addEventListener("resize", showButton); // whenever you resize the screen, showButton will run
+  window.addEventListener("resize", showLinks);
+
+  // render items
+  const navbarJSX = navbarData.map((navlink) => {
+    return (
+      <NavItem>
+        <NavLink to={navlink.to}>{navlink.name}</NavLink>
+      </NavItem>
+    );
+  });
 
   return (
-    <>
-      <Nav>
-        <NavbarContainer>
-          <NavLogo to='/' onClick={closeMobileMenu}>
-            MERISSA LI
-          </NavLogo>
-          <NavMenu>
-            <NavItem>
-              <NavLink to='/about' onClick={closeMobileMenu}>
-                About
-              </NavLink>
-            </NavItem>
+    <Nav>
+      <NavbarContainer>
+        <NavLogo to='/'>MERISSA LI</NavLogo>
 
-            <NavItem>
-              <NavLink to='/experiences' onClick={closeMobileMenu}>
-                Experiences
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink to='/projects' onClick={closeMobileMenu}>
-                Projects
-              </NavLink>
-            </NavItem>
-
-            <NavItem>
-              <NavLink to='/interests' onClick={closeMobileMenu}>
-                Interests
-              </NavLink>
-            </NavItem>
-          </NavMenu>
-        </NavbarContainer>
-      </Nav>
-    </>
+        <NavMenu>{areLinksVisible && navbarJSX}</NavMenu>
+      </NavbarContainer>
+    </Nav>
   );
 }
 
@@ -78,7 +77,6 @@ const Nav = styled.nav`
   padding-top: 10px;
   padding-bottom: 5px;
   border-bottom: 1px solid #c5c5c571;
-  margin-bottom: 3rem;
 `;
 
 const NavbarContainer = styled.div`
@@ -102,6 +100,7 @@ const NavLogo = styled(Link)`
   line-height: 40px;
   letter-spacing: 0.05em;
   text-align: center;
+  min-width: 190px;
 `;
 
 const NavMenu = styled.ul`
