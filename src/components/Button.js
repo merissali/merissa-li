@@ -1,31 +1,43 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
-// const STYLES = ["btn--primary", "btn--outline"];
-
-// const SIZES = ["btn--medium", "btn--large"];
-
 export const Button = ({ to, children }) => {
+  // state
+  const [hover, setHover] = useState(false);
+
+  // functions
+  const onHover = () => {
+    setHover(!hover);
+  };
+
   return (
-    <Link to={to}>
-      <StyledButton>{children}</StyledButton>
-    </Link>
+    <StyledButton to={to} onMouseEnter={onHover} onMouseLeave={onHover}>
+      {children}
+    </StyledButton>
   );
 };
 
-const StyledButton = styled.button`
-  padding: 8px 20px;
+const StyledButton = styled(Link)`
+  padding: 15px 30px;
   border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
+  background: transparent;
+  white-space: nowrap;
   color: #fff;
-  padding: 8px 20px;
+  outline: none;
   border: 3px solid #fff;
-  transition: all 0.3s ease-out;
-  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  font-size: 30px;
   font-weight: bold;
-  letter-spacing: -0.05em;
   text-transform: capitalize;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #bbcae4;
+  }
 `;
