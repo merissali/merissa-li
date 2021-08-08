@@ -8,22 +8,18 @@ function Navbar() {
   const navbarData = [
     {
       name: "About",
-      // to: "/about",
       to: "about",
     },
     {
-      name: "Experiences",
-      // to: "/experiences",
-      to: "experiences",
+      name: "Work",
+      to: "work",
     },
     {
       name: "Projects",
-      // to: "/projects",
       to: "projects",
     },
     {
       name: "Interests",
-      // to: "/interests",
       to: "interests",
     },
   ];
@@ -31,6 +27,7 @@ function Navbar() {
   // state
   const [areLinksVisible, setAreLinksVisible] = useState(true);
 
+  // functions
   const showLinks = () => {
     if (window.innerWidth <= 960) {
       setAreLinksVisible(false);
@@ -39,6 +36,7 @@ function Navbar() {
     }
   };
 
+  // effects
   useEffect(() => {
     showLinks();
   }, []);
@@ -66,7 +64,7 @@ function Navbar() {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='home' spy={true} smooth={true} offset={-90} duration={500}>
+        <NavLogo to='home' spy={true} smooth={true} offset={-20} duration={500}>
           MERISSA LI
         </NavLogo>
 

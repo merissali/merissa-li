@@ -1,23 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import headshot from "./img/headshot.jpg";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 import "./App.css";
 import Home from "./pages/Home";
-import InfoSection from "./components/InfoSection";
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <Switch>l
+      <Switch>
         <Route path='/' exact component={Home} />
-        {/* <Route path='/about' exact component={InfoSection} /> */}
-        {/* <Route path='/experiences' exact component={Experiences} />
-          <Route path='/projects' exact component={Projects} />
-          <Route path='/interests' exact component={Interests} /> */}
       </Switch>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

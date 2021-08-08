@@ -12,7 +12,16 @@ export const Button = ({ to, children }) => {
   };
 
   return (
-    <StyledButton to={to} onMouseEnter={onHover} onMouseLeave={onHover}>
+    <StyledButton
+      to={to}
+      onMouseEnter={onHover}
+      onMouseLeave={onHover}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
+      activeClass='selected'
+    >
       {children}
     </StyledButton>
   );
@@ -38,6 +47,6 @@ const StyledButton = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #bbcae4;
+    color: #4d5868;
   }
 `;

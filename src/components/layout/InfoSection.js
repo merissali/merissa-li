@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import About from "./sections/About";
-import Experiences from "./sections/Experiences";
+import About from "../sections/About";
+import Work from "../sections/Work";
+import Projects from "../sections/Projects";
 
 function InfoSection({ id }) {
   return (
@@ -9,7 +10,8 @@ function InfoSection({ id }) {
       <InfoContainer id={id}>
         <InfoWrapper>
           {id === "about" && <About />}
-          {id === "experiences" && <Experiences />}
+          {id === "work" && <Work />}
+          {id === "projects" && <Projects />}
         </InfoWrapper>
         <SectionLine />
       </InfoContainer>
@@ -35,8 +37,10 @@ const InfoWrapper = styled.div`
   margin-right: auto;
   margin-left: auto;
   margin-top: 2rem;
-  padding-top: 24px;
-  padding: 24px 20px 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 6rem;
+  padding-top: 4rem;
   justify-content: center;
 `;
 const SectionLine = styled.div`
