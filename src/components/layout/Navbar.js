@@ -18,10 +18,10 @@ function Navbar() {
       name: "Projects",
       to: "projects",
     },
-    {
-      name: "Interests",
-      to: "interests",
-    },
+    // {
+    //   name: "Interests",
+    //   to: "interests",
+    // },
   ];
 
   // state

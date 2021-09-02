@@ -4,7 +4,16 @@ import styled from "styled-components";
 function Projects() {
   return (
     <>
-      <ComingSoon>More coming soon - stay tuned!</ComingSoon>
+      <ComingSoon>
+        Check out my portfolio{" "}
+        <a
+          href='https://merissali.notion.site/merissali/Merissa-s-Portfolio-1b3f46e78713456ead16bcb4b42a4b88'
+          target='_blank'
+        >
+          here
+        </a>
+        !
+      </ComingSoon>
     </>
   );
 }
