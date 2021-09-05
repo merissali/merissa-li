@@ -15,6 +15,9 @@ function HeroSection() {
         <HeroBtnWrapper>
           <Button to='about'>GET TO KNOW ME</Button>
         </HeroBtnWrapper>
+        {/* <HeroBtnWrapper>
+          <Button to='about'>GET IN TOUCH</Button>
+        </HeroBtnWrapper> */}
       </HeroContent>
     </HeroContainer>
   );
@@ -93,5 +96,5 @@ const HeroBtnWrapper = styled.div`
   margin-top: 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 `;

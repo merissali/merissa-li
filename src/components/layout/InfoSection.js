@@ -39,7 +39,7 @@ const InfoWrapper = styled.div`
   margin-top: 2rem;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
   padding-top: 4rem;
   justify-content: center;
 `;
