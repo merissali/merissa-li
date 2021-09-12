@@ -21,26 +21,37 @@ function About() {
     return <li>{skill}</li>;
   });
   return (
-    <Grid container spacing={6}>
-      <Grid item xs={6}>
+    <Grid container xs={12}>
+      <Grid item xs={6} sm={6}>
         <HeadshotWrapper>
           <Headshot src={headshot} />
         </HeadshotWrapper>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item xs={6} sm={6}>
         <AboutMe>ABOUT ME</AboutMe>
         <AboutText>
           Hi! My name is Merissa and I am currently a 4th year student studying
-          a combined major in Business & Computer Science at the University of
+          a double major in Business & Computer Science at the University of
           British Columbia.
         </AboutText>
         <AboutText>
-          I’ve always loved solving problems creatively, especially using
-          technology, which leads me to my interest in product management today.
+          I’ve always loved solving problems, even - or especially - when
+          they're vague. My most recent internship (as part of RBC's Amplify
+          Program) involved ideating and creating a product from a vague
+          business challenge, which was a process I enjoyed thoroughly and one
+          in which I learned a lot about the product development process.
         </AboutText>
         <AboutText>
-          I value human connection, empathy, and continual personal &
-          professional growth.
+          With my technical and business-oriented background, I have a strong
+          ability to translate business needs into technical requirements,
+          communicate technical terms in a simple manner, and proven ability
+          collaborating cross-functionally with teams such as UX, Engineering,
+          and Marketing.
+        </AboutText>
+        <AboutText>
+          I am seeking to apply my technical expertise and creative energy in a
+          Product Management Intern role. I would also love to chat - feel free
+          to reach out!
         </AboutText>
         <h1>TECHNICAL SKILLS</h1>
         <SkillsList>{technicalSkillsJSX}</SkillsList>
@@ -59,7 +70,7 @@ const HeadshotWrapper = styled.div`
 `;
 const Headshot = styled.img`
   position: absolute;
-  margin: 6rem 4rem 4rem 4rem;
+  margin: 10rem 4rem 6rem 4rem;
 `;
 
 const AboutMe = styled.h1`
